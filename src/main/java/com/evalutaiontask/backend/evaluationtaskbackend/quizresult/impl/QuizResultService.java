@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 @Component
 @AllArgsConstructor
-@CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200", "http://localhost:8081" })
+@CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200", "http://localhost:8081", "https://backendquiz.herokuapp.com" })
 public class QuizResultService {
     private final QuizResultRepository repository;
     private final QuizResultConverter converter;
