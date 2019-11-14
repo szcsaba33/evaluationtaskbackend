@@ -6,14 +6,18 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-@AllArgsConstructor
+
 @NoArgsConstructor
 public class QuizResult {
-    private final String name = "User";
-    private final float numCorrect = 0;
-    private final float numTotal = 0;
+    private String name = "User";
+    private float numCorrect = 0.0f;
+    private float numTotal = 0.0f;
 
-
+    public QuizResult(String name, float numCorrect, float numTotal) {
+        this.name = name;
+        this.numCorrect = numCorrect;
+        this.numTotal = numTotal;
+    }
 
 
     public String getName() {
