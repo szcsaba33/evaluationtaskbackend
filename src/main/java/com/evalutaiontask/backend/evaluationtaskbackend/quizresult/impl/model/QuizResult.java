@@ -9,9 +9,9 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @NoArgsConstructor
 public class QuizResult {
-    private String name = "User";
-    private float numCorrect = 0.0f;
-    private float numTotal = 0.0f;
+    private String name;
+    private float numCorrect;
+    private float numTotal;
 
     public QuizResult(String name, float numCorrect, float numTotal) {
         this.name = name;
