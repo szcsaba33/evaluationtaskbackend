@@ -1,19 +1,20 @@
 package com.evalutaiontask.backend.evaluationtaskbackend.quizresult.impl.model;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+@AllArgsConstructor
+@NoArgsConstructor
 public class QuizResult {
     private final String name;
     private final float numCorrect;
     private final float numTotal;
 
-    public QuizResult(String name, float numCorrect, float numTotal) {
-        this.name = name;
-        this.numCorrect = numCorrect;
-        this.numTotal = numTotal;
-    }
+
+
 
     public String getName() {
         return name;
