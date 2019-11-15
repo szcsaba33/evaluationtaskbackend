@@ -11,14 +11,14 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200", "http://localhost:8081", "http://localhost:8080", "https://backendquiz.herokuapp.com" })
+@CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200", "http://localhost:8081", "http://localhost:8080", "https://backendquiz.herokuapp.com", "https://evaluationtask.herokuapp.com" })
 public class QuizResultController {
     private static final Logger LOGGER = LoggerFactory.getLogger(QuizResultController.class);
 
     private final QuizResultService service;
 
     @GetMapping(path = "/quizresult")
-    @CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200", "http://localhost:8081", "http://localhost:8080", "https://backendquiz.herokuapp.com" })
+    @CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200", "http://localhost:8081", "http://localhost:8080", "https://backendquiz.herokuapp.com", "https://evaluationtask.herokuapp.com" })
     public List<QuizResult> getAllDishwashers() {
         return service.findAll();
     }
@@ -30,7 +30,7 @@ public class QuizResultController {
     }
 
     @PostMapping(path = "/quizresult")
-    @CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200", "http://localhost:8081", "http://localhost:8080", "https://backendquiz.herokuapp.com" })
+    @CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200", "http://localhost:8081", "http://localhost:8080", "https://backendquiz.herokuapp.com", "https://evaluationtask.herokuapp.com" })
     public QuizResult createDishwasher(@RequestBody QuizResult quizResult) {
         LOGGER.info("Saving quizresult={}", quizResult);
 
