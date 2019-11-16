@@ -13,12 +13,13 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200", "http://localhost:8081", "http://localhost:8080", "https://backendquiz.herokuapp.com" })
+@CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200", "http://localhost:8081", "http://localhost:8080", "https://backendquiz.herokuapp.com", "https://evaluationtask.herokuapp.com" })
 public class QuizResultPerformanceController {
     private final QuizResultService quizResultService;
     private QuizResultPerformanceService quizResultPerformanceService;
 
     @GetMapping(path = "/quizresult-performance")
+    @CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200", "http://localhost:8081", "http://localhost:8080", "https://backendquiz.herokuapp.com", "https://evaluationtask.herokuapp.com" })
     public QuizResultPerformanceStats getPerformance() {
         List<QuizResult> quizResults = quizResultService.findAll();
 
