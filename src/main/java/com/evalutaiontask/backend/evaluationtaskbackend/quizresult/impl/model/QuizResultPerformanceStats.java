@@ -7,6 +7,7 @@ import lombok.Data;
 @Builder
 public class QuizResultPerformanceStats {
     private final float minNumCorrect;
+    private final float maxNumCorrect;
     private final float averageNumCorrect;
     private final float averageNumTotal;
 }

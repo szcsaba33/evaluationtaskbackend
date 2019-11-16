@@ -12,6 +12,7 @@ public class QuizResultPerformanceService {
     public QuizResultPerformanceStats calculateStats(List<QuizResult> quizResults) {
         return QuizResultPerformanceStats.builder()
                 .minNumCorrect(getMinNumCorrect(quizResults))
+                .maxNumCorrect(getMaxNumCorrect(quizResults))
                 .averageNumCorrect(getAverageNumCorrect(quizResults))
                 .averageNumTotal(getAverageNumTotal(quizResults))
                 .build();
@@ -35,6 +36,13 @@ public class QuizResultPerformanceService {
         return (float) quizResults.stream()
                 .mapToDouble(QuizResult::getNumCorrect)
                 .min()
+                .orElse(0.0);
+    }
+
+    private float getMaxNumCorrect(List<QuizResult> quizResults) {
+        return (float) quizResults.stream()
+                .mapToDouble(QuizResult::getNumCorrect)
+                .max()
                 .orElse(0.0);
     }
 
