@@ -19,19 +19,19 @@ public class QuizResultController {
 
     @GetMapping(path = "/quizresult")
     @CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200", "http://localhost:8081", "http://localhost:8080", "https://backendquiz.herokuapp.com", "https://evaluationtask.herokuapp.com" })
-    public List<QuizResult> getAllDishwashers() {
+    public List<QuizResult> getAllQuizResults() {
         return service.findAll();
     }
 
     @GetMapping(path = "/quizresult/name/{name}")
     @CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200", "http://localhost:8081", "http://localhost:8080", "https://backendquiz.herokuapp.com" })
-    public List<QuizResult> getDishwashersByName(@PathVariable String name) {
+    public List<QuizResult> getQuizResultsByName(@PathVariable String name) {
         return service.findAllByName(name);
     }
 
     @PostMapping(path = "/quizresult")
     @CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200", "http://localhost:8081", "http://localhost:8080", "https://backendquiz.herokuapp.com", "https://evaluationtask.herokuapp.com" })
-    public QuizResult createDishwasher(@RequestBody QuizResult quizResult) {
+    public QuizResult createQuizResults(@RequestBody QuizResult quizResult) {
         LOGGER.info("Saving quizresult={}", quizResult);
 
         return service.save(quizResult);
